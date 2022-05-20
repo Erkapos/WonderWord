@@ -408,11 +408,6 @@ class _WordFindWidgetState extends State<WordFindWidget> {
         await Future.delayed(Duration(seconds: 1));
         totalScore++;
         print(totalScore);
-        if(totalScore==listQuestions.length){
-          Navigator.push(
-          context, MaterialPageRoute(builder: (context) => screenEnd()));
-        }
-        print(listQuestions.length);
         generatePuzzle(next: true);
       }
 
@@ -440,6 +435,11 @@ class _WordFindWidgetState extends State<WordFindWidget> {
         await Future.delayed(Duration(seconds: 1));
         totalScore++;
         print(totalScore);
+        if(totalScore==listQuestions.length){
+          Navigator.push(
+          context, MaterialPageRoute(builder: (context) => screenEnd()));
+        }
+        print(listQuestions.length);
         generatePuzzle(next: true);
       }
       setState(() {});
